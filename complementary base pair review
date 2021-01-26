@@ -1,0 +1,97 @@
+#include <cstdlib>
+#include <iostream>
+#include <future>
+#include <chrono>  
+#include <string>
+#include <algorithm>
+#include <random>
+// I almost for sure know I am waisting resources with includes and such... not that it matters
+#pragma optimize("", off)
+std::future <void> asyncCut;
+bool check = false;
+void crash() {
+
+	std::this_thread::sleep_for(std::chrono::seconds{ 36 }); // I'm a nice guy
+	if (check == false) {
+		abort();
+	}
+	else {
+
+		
+
+	}
+
+}
+
+int main() {
+	
+	std::cout << "gotta go fast and get the complementary base pairs of the DNA strand - you have 35 seconds... hurry - type out each allele and click enter when done:\n";
+
+	std::string input;
+
+	int temp = 0; 
+	
+	std::string IntresstingManuver;
+
+	std::string YourShouldBeString;
+
+	std::mt19937 rng(std::random_device{}());
+	std::uniform_int_distribution<int> dist(0, 3);
+	
+	for (int i = 0; i < 50; i++) {
+
+
+		temp = dist(rng);
+	
+		switch (temp) {
+
+		case 0:
+			IntresstingManuver.append("A");
+			YourShouldBeString.append("T");
+			continue;
+		case 1:
+			IntresstingManuver.append("T");
+			YourShouldBeString.append("A");
+			continue;
+		case 2:
+			IntresstingManuver.append("G");
+			YourShouldBeString.append("C");
+			continue;
+		case 3:
+			IntresstingManuver.append("C");
+			YourShouldBeString.append("G");
+			continue;
+		}
+
+
+	}
+	asyncCut = std::async(std::launch::async, [&] {crash(); });
+	
+
+	std::cout << IntresstingManuver;
+	
+	std::cout << "\n Complementary Strand: ";
+
+	std::cin >> input;
+
+	for (auto& a : input) {
+
+		a = toupper(a);
+
+	}
+	
+	if (input == YourShouldBeString) {
+		check = true;
+		std::cout << "\n\n you did a thing and saved someones life or something like that!";
+
+	}
+	else {
+
+		std::cout << "\n\n you did a thing and failed... something bad happened";
+		std::cin >> IntresstingManuver;
+	}
+
+
+
+	
+}
