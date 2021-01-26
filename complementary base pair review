@@ -1,3 +1,4 @@
+/////////////////////THIS IS THE WINDOWS ONLY CODE... I LATER REALISED I NEED LINUX SUPPORT
 #include <cstdlib>
 #include <iostream>
 #include <future>
