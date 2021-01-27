@@ -71,7 +71,7 @@ int main() {
 
 	std::cout << IntresstingManuver;
 	
-	std::cout << "\n Complementary Strand: ";
+	std::cout << "\n Complementary Strand:\n ";
 
 	std::cin >> input;
 
@@ -83,7 +83,7 @@ int main() {
 	
 	if (input == YourShouldBeString) {
 		check = true;
-		std::cout << "\n\n you did a thing and saved someones life or something like that!";
+		std::cout << "\n\n you did a thing and saved someones life or something like that -- just input this code!  ATGCTACG";
 
 	}
 	else {
