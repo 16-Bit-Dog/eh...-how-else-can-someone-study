@@ -1,4 +1,4 @@
-/////////////////////THIS IS THE WINDOWS ONLY CODE... I LATER REALISED I NEED LINUX SUPPORT
+/////////////////////THIS IS THE WINDOWS ONLY CODE... I LATER REALISED I NEED LINUX SUPPORT - BOOTCAMP or WINE is nessisary to emulate the .EXE
 #include <cstdlib>
 #include <iostream>
 #include <future>
@@ -18,32 +18,32 @@ void crash() {
 	}
 	else {
 
-		
+
 
 	}
 
 }
 
 int main() {
-	
+
 	std::cout << "gotta go fast and get the complementary base pairs of the DNA strand - you have 35 seconds... hurry - type out each allele and click enter when done:\n";
 
 	std::string input;
 
-	int temp = 0; 
-	
+	int temp = 0;
+
 	std::string IntresstingManuver;
 
 	std::string YourShouldBeString;
 
 	std::mt19937 rng(std::random_device{}());
 	std::uniform_int_distribution<int> dist(0, 3);
-	
+
 	for (int i = 0; i < 50; i++) {
 
 
 		temp = dist(rng);
-	
+
 		switch (temp) {
 
 		case 0:
@@ -67,10 +67,10 @@ int main() {
 
 	}
 	asyncCut = std::async(std::launch::async, [&] {crash(); });
-	
+
 
 	std::cout << IntresstingManuver;
-	
+
 	std::cout << "\n Complementary Strand:\n ";
 
 	std::cin >> input;
@@ -80,10 +80,10 @@ int main() {
 		a = toupper(a);
 
 	}
-	
+
 	if (input == YourShouldBeString) {
 		check = true;
-		std::cout << "\n\n you did a thing and saved someones life or something like that -- just input this code!  ATGCTACG";
+		std::cout << "\n\n you did a thing and saved someones life or something like that -- just input this code!  AGTC";
 
 	}
 	else {
@@ -94,5 +94,5 @@ int main() {
 
 
 
-	
+
 }
