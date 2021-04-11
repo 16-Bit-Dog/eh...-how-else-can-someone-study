@@ -1,2 +1,3 @@
 # eh...-how-else-can-someone-study
 ... 
+you need at least 2 cores for this program to work
